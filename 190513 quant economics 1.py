@@ -118,6 +118,57 @@ s4
 
 #Input and Output
 
+f = open('newfile.txt', 'w')   # Open 'newfile.txt' for writing
+f.write('Testing\n')           # Here '\n' means new line
+f.write('Testing again')
+f.close()
+
+%pwd
+
+f = open('newfile.txt', 'r') #'r' means that we want to read the file
+out = f.read()
+out
+print(out)
+
+f = open('C:\\Users\\willi\\Desktop\\working\\projects_git\\python-with-QuantEcon\\newfile.txt', 'r')
+out = f.read()
+print(out)
+
+#Iteraing
+
+%%file us_cities.txt
+new york: 8244910
+los angeles: 3819702
+chicago: 2707120
+houston: 2145146
+philadelphia: 1536471
+phoenix: 1469471
+san antonio: 1359758
+san diego: 1326179
+dallas: 1223229
+
+data_file = open('us_cities.txt', 'r')
+for line in data_file:
+    city, population = line.split(':')         # Tuple unpacking
+    city = city.title()                        # Capitalize city names
+    population = f'{int(population):,}'        # Add commas to numbers
+    print(city.ljust(15) + population)
+data_file.close()
+
+x = ('a', 'b') #tuple, immutable list
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
