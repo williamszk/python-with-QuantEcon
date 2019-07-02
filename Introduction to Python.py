@@ -7,6 +7,7 @@
 # <editor-fold> An Introductory Example  **********************************
 # An Introductory Example
 # Exercise 4
+import math
 from numpy.random import uniform
 import numpy as np
 import matplotlib.pyplot as plt
@@ -275,7 +276,6 @@ True + True
 bools = [True, True, False, True]  # List of Boolean values
 
 sum(bools)
-
 a, b = 1, 2
 c, d = 2.5, 10.0
 type(a)
@@ -285,7 +285,6 @@ type(c)
 x = complex(1, 2)
 y = complex(2, 1)
 x * y
-
 
 # Containers
 # tuples
@@ -720,7 +719,7 @@ def linapprox(f, a, b, n, x):
 ############################################################################
 # OOP I: Introduction to Object Oriented Programming #######################
 ############################################################################
-# <editor-fold>   OOP I: Introduction to Object Oriented Programming **********************************
+# <editor-fold>   OOP I: Introduction to Object Oriented Programming *******
 
 # Type
 s = 'This is a string'
@@ -750,6 +749,48 @@ x.__class__  # an attribute of type
 type(x)
 
 # Methods
+
+x = ['foo', 'bar']
+x
+callable(x.append)
+callable(x.__doc__)
+
+x = ['a', 'b']
+x
+x.append('c')
+x
+s = 'This is a string'
+s.upper()
+s.lower()
+
+s.replace('This', 'That')
+
+x = ['a', 'b']
+x[0] = 'aa'  # Item assignment using square bracket notation
+x
+
+x = ['a', 'b']
+x.__setitem__(0, 'aa')  # Equivalent to x[0] = 'aa'
+x
+
+# Summary
+
+
+def f(x): return x**2
+
+
+f
+type(f)
+id(f)
+f.__name__
+
+# One example is the __call__ method, which just evaluates the function
+f.__call__(3)
+
+# returns a list of attributes
+f.__dir__()
+
+id(math)
 
 
 # </editor-fold> ****************************************************************************************
